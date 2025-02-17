@@ -1,6 +1,6 @@
 @extends('layout.layout') @section('content')
     <div class="w-screen h-screen flex justify-center items-center">
-        <h1 class="text-7xl uppercase text-red-950 font-medium">
+        <h1 class="text-xl uppercase text-black font-medium">
             transactions page
         </h1>
     </div>
