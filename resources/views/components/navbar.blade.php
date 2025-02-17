@@ -10,7 +10,9 @@
     <div class="flex gap-5">
         <a class="p-2 rounded-md transition-all duration-300 transform hover:bg-gray-600 hover:scale-105 hover:text-green-400" href="{{ route('home') }}">Home</a>
         <a class="p-2 rounded-md transition-all duration-300 transform hover:bg-gray-600 hover:scale-105 hover:text-green-400" href="{{ route('events') }}">Events</a>
-        <a class="p-2 rounded-md transition-all duration-300 transform hover:bg-gray-600 hover:scale-105 hover:text-green-400" href="{{ route('transaction') }}">Transactions</a>
+        @can('manage-transactions')
+            <a class="p-2 rounded-md transition-all duration-300 transform hover:bg-gray-600 hover:scale-105 hover:text-green-400" href="{{ route('transaction') }}">Transactions</a>
+        @endcan
 
         @if (auth()->check())
             <a class="p-2 rounded-md transition-all duration-300 transform hover:bg-gray-600 hover:scale-105 hover:text-green-400" href="{{ route('profile') }}">Profile</a>
