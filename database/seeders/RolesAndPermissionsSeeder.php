@@ -15,7 +15,7 @@ class RolesAndPermissionsSeeder extends Seeder
      */
     public function run(): void
     {
-        $permissions = ['view-events', 'manage-events', 'manage-transactions'];
+        $permissions = ['view-events', 'manage-events', 'manage-transactions', 'manage-users'];
 
         foreach($permissions as $permission){
             Permission::create(['name' => $permission]);
@@ -40,8 +40,8 @@ class RolesAndPermissionsSeeder extends Seeder
         ]);
 
 
-        $user1->assignRole('admin');
-        $user2->assignRole('user');
+        $user1->givePermissionTo($permissions);
+        $user2->givePermissionTo('view-events');
 
     }
 }
