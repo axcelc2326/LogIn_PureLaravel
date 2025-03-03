@@ -6,9 +6,9 @@
             <h1 class="text-4xl font-bold uppercase text-green-500">users page</h1>
             @if (session('success'))
                 <div
-                    class="flex items-center justify-between p-4 text-white bg-green-100 border border-green-300 rounded-lg flash-message">
+                    class="flex items-center justify-between p-4 text-green-800 bg-green-100 border border-green-300 rounded-lg flash-message">
                     <div class="flex items-center space-x-2">
-                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2"
+                        <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" stroke-width="2"
                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
                         </svg>
